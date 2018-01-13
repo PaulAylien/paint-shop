@@ -1,7 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94aa5079-5994-42b2-97d8-08bb098154da" name="Default" comment="" />
+    <list default="true" id="94aa5079-5994-42b2-97d8-08bb098154da" name="Default" comment="add git ignore.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileChanges/last-build.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/built.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/emacs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_aol_simplereact_cyclops_react_2_1_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_1_3_9.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_23_6_jre.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_github_microutils_kotlin_logging_1_4_9.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_vavr_vavr_0_9_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_vavr_vavr_match_0_9_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_agrona_Agrona_0_9_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_2_10.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_10.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_2_10.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jooq_jool_0_9_12.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_0_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_pcollections_pcollections_2_1_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/aylien.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/aylien_main.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/aylien_test.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bigbatch.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/aylien_main.kotlin_module" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/PaintKt.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/Color.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/ConsoleInputProvider.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/Customer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/CustomerBuilder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/DataObjectsInputKt$matteHasLowestPriority$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/DataObjectsInputKt.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/Finish.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/InputLines.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/InputProvider.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/Paint.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/PaintBuilder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/TestCase.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/input/TestCaseBuilder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/output/ConsolerResultReporter.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/output/Impossible.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/output/Result.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/output/ResultReporter.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/output/SuccessfulResult.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/DefaultPaintMixDecisionMaker.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/DefaultPathLogger$Companion.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/DefaultPathLogger$log$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/DefaultPathLogger.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/PaintMixDecisionMaker.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/PaintSelection.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/PaintSelectionGenerator$matteHasLowestPriority$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/PaintSelectionGenerator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/PathLogger.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/tree/BestPathFinder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/tree/BestPathFinderFactory.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/tree/BestPathFinderKt.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/tree/MatteAwareFinder.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/tree/MinimumMattePathTracker.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/tree/NotBestChoice.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/tree/SuccessfulCombination.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/paul/aylien/processor/tree/TreePathResult.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/META-INF/aylien_main.kotlin_module" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/TestPathLogger.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/TestUtils.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/generator/InputGeneratorKt$customerToString$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/generator/InputGeneratorKt.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/generator/RandomColoursGenerator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/generator/RandomCustomersGenerator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/generator/RandomCustomersGeneratorKt.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/input/ConsoleInputProviderTest$throws useful exception for invalid numberOfCustomers$exception$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/input/ConsoleInputProviderTest$throws useful exception for invalid numberOfPaints$exception$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/input/ConsoleInputProviderTest$throws useful exception for invalid numberOfTestsCases$exception$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/input/ConsoleInputProviderTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/processor/DefaultPaintMixDecisionMakerTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/paul/aylien/processor/PaintSelectionGeneratorTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/bigbatch.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/input_file_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/invalid/numberOfCustomersNotCorrectlySpecified" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/invalid/numberOfPaintsNotCorrectlySpecified" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/invalid/numberOfTestCasesNotCorrectlySpecified" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/singleEntry.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/smallbatch.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/smallbatch.txt" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -33,17 +138,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/processor/tree/BestPathFinderFactory.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="8" column="66" lean-forward="true" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaintSelectionGenerator.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/processor/PaintSelectionGenerator.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -61,12 +156,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="438">
-                <caret line="240" column="0" lean-forward="true" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+                <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -74,11 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bigbatch.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bigbatch.txt">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,6 +238,9 @@
     <replaceStrings>
       <replace />
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -493,7 +591,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/output/ResultPrinter.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/input/DefaultInputParser.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/Paint.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/input/PaintBuilder.kt" />
@@ -544,6 +641,7 @@
         <option value="$PROJECT_DIR$/src/test/kotlin/com/paul/aylien/processor/DefaultPaintMixDecisionMakerTest.kt" />
         <option value="$PROJECT_DIR$/bigbatch.txt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -559,6 +657,7 @@
     <option name="width" value="1276" />
     <option name="height" value="777" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -618,6 +717,9 @@
       <recent name="com.paul.aylien.processor.tree" />
       <recent name="com.paul.aylien.output" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.paul.aylien.input" />
       <recent name="com.paul.aylien.processor" />
@@ -625,19 +727,17 @@
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.paul.aylien.processor" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/resources/invalid" />
-      <recent name="$PROJECT_DIR$/src/test/resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/processor/tree" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/Output" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/input" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test/resources/invalid" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -888,8 +988,23 @@
       <updated>1515604073077</updated>
       <workItem from="1515604083797" duration="47533000" />
       <workItem from="1515771021785" duration="9908000" />
-      <workItem from="1515856346083" duration="9376000" />
+      <workItem from="1515856346083" duration="9925000" />
     </task>
+    <task id="LOCAL-00001" summary="add git ignore.">
+      <created>1515866527683</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1515866527684</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add git ignore.">
+      <created>1515866635638</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1515866635638</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -925,7 +1040,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66817000" />
+    <option name="totallyTimeSpent" value="67366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="6" />
@@ -948,11 +1063,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46585736" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Graph Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3262519" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262519" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0349026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38474026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Graph Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -973,6 +1088,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add git ignore." />
+    <option name="LAST_COMMIT_MESSAGE" value="add git ignore." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1062,14 +1181,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/output/ConsolerResultReporter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.10/c0f90f56ebb568fe5fa4001ee1941b27cb8a2e1f/kotlin-stdlib-1.2.10-sources.jar!/generated/_Collections.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1399,7 +1510,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/paul/aylien/processor/tree/BestPathFinderFactory.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="8" column="66" lean-forward="true" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+          <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -1440,7 +1551,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="438">
-            <caret line="240" column="0" lean-forward="true" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+            <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1449,6 +1560,14 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
