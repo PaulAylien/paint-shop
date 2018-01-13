@@ -1,0 +1,14 @@
+*.versionsBackup
+
+# Intellij
+.idea/
+*.iml
+*.iws
+coverage-error.log
+
+# Mac
+.DS_Store
+
+# Gradle
+.gradle
+build/
