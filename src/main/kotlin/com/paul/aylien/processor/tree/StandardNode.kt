@@ -5,6 +5,9 @@ import com.paul.aylien.input.Finish
 import com.paul.aylien.input.Paint
 import com.paul.aylien.processor.tree.builder.PathCollapsor.collapseToCacheNode
 
+
+const val NUMBER_OF_NODES_IN_PATH_BEFORE_CACHING = 100
+
 /**
  * Represents a node in the tree.
  * There are 3 different implementations
@@ -36,7 +39,7 @@ class StandardNode(val parent: PaintPreferenceNode,
                    numberOfMatteFinish: Int) : PaintPreferenceNode(numberOfMatteFinish) {
 
     override fun newLeafNodePathWith(paint: Paint): PaintPreferenceNode =
-            if (numberOfUnCached > 1) {
+            if (numberOfUnCached > NUMBER_OF_NODES_IN_PATH_BEFORE_CACHING) {
                 collapseToCacheNode(this, paint)
             } else {
                 StandardNode(this, paint, numberOfUnCached + 1, numberOfMatteFinish + paint.finish.ordinal)

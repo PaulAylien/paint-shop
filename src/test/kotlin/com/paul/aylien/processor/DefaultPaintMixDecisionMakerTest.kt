@@ -7,8 +7,8 @@ import com.paul.aylien.input.Finish.GLOSSY
 import com.paul.aylien.input.Finish.MATTE
 import com.paul.aylien.output.Impossible
 import com.paul.aylien.output.SuccessfulResult
-import com.paul.aylien.processor.tree.result.finder.BestPathFinderFactory
 import com.paul.aylien.processor.tree.result.SuccessfulCombination
+import com.paul.aylien.processor.tree.result.finder.BestPathFinderFactory
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
@@ -37,12 +37,37 @@ internal class DefaultPaintMixDecisionMakerTest {
         val file = "input_file_1.txt"
         setFileContentAsSystemIn(file)
         // act
-        val map = ConsoleInputProvider().getTestCases()
+        val results = ConsoleInputProvider().getTestCases()
                 .map { defaultPaintMixDecisionMaker.findBestBatch(it) }
         //assert
-        Assertions.assertEquals(SuccessfulResult(listOf(MATTE, GLOSSY, GLOSSY, GLOSSY, GLOSSY)), map[0])
-        Assertions.assertEquals(Impossible(), map[1])
+        Assertions.assertEquals(SuccessfulResult(listOf(MATTE, GLOSSY, GLOSSY, GLOSSY, GLOSSY)), results[0])
+        Assertions.assertEquals(Impossible(), results[1])
         Assertions.assertEquals(1, logger.receivedEvents.filter { it is SuccessfulCombination }.size)
+    }
+
+    @Test
+    fun `test impossible case`() {
+        // arrange
+        val file = "input_file_1.txt"
+        setFileContentAsSystemIn(file)
+        // act
+        val results = ConsoleInputProvider().getTestCases()
+                .map { defaultPaintMixDecisionMaker.findBestBatch(it) }
+        //assert
+        Assertions.assertEquals(SuccessfulResult(listOf(MATTE, GLOSSY, GLOSSY, GLOSSY, GLOSSY)), results[0])
+        Assertions.assertEquals(Impossible(), results[1])
+        Assertions.assertEquals(1, logger.receivedEvents.filter { it is SuccessfulCombination }.size)
+    }
+
+    @Test
+    fun `all results are glossy`() {
+        // arrange
+        setFileContentAsSystemIn("allResultsAreGlossy.txt")
+        // act
+        val results = ConsoleInputProvider().getTestCases()
+                .map { defaultPaintMixDecisionMaker.findBestBatch(it) }
+
+        Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, GLOSSY, GLOSSY)), results[0])
     }
 
     @Test
@@ -50,11 +75,11 @@ internal class DefaultPaintMixDecisionMakerTest {
         // arrange
         setFileContentAsSystemIn("singleEntry.txt")
         // act
-        val map = ConsoleInputProvider().getTestCases()
+        val results = ConsoleInputProvider().getTestCases()
                 .map { defaultPaintMixDecisionMaker.findBestBatch(it) }
         // assert
-        Assertions.assertEquals(1, map.size)
-        Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, MATTE, GLOSSY, GLOSSY, GLOSSY, GLOSSY, GLOSSY, MATTE)), map[0])
+        Assertions.assertEquals(1, results.size)
+        Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, MATTE, GLOSSY, GLOSSY, GLOSSY, GLOSSY, GLOSSY, MATTE)), results[0])
     }
 
     @Test
@@ -62,14 +87,12 @@ internal class DefaultPaintMixDecisionMakerTest {
         // arrange
         setFileContentAsSystemIn("smallbatch.txt")
         // act
-        val map = ConsoleInputProvider().getTestCases()
+        val results = ConsoleInputProvider().getTestCases()
                 .map { defaultPaintMixDecisionMaker.findBestBatch(it) }
         // assert
-        Assertions.assertEquals(100, map.size)
-        Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, MATTE, GLOSSY, GLOSSY, GLOSSY, GLOSSY, GLOSSY, MATTE)), map[1])
-
-
-        logger.receivedEvents.size
+        Assertions.assertEquals(100, results.size)
+        Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, MATTE, GLOSSY, GLOSSY, GLOSSY, GLOSSY, GLOSSY, MATTE)), results[1])
+        Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, GLOSSY, GLOSSY)), results[10])
     }
 
     @Test
