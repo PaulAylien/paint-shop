@@ -7,7 +7,7 @@ class ConsoleResultReporter : ResultReporter {
 
 
     override fun reportResults(results: List<Result>) =
-            results.forEachIndexed { index, result -> println("Case #$index: ${getResultString(result)}") }
+            results.forEachIndexed { index, result -> println("Case #${index+1}: ${getResultString(result)}") }
 
     private fun getResultString(result: Result): String {
         return when (result) {
