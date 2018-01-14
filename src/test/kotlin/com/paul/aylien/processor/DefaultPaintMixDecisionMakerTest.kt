@@ -11,14 +11,35 @@ import com.paul.aylien.processor.tree.result.SuccessfulCombination
 import com.paul.aylien.processor.tree.result.finder.BestPathFinderFactory
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.MethodSource
 
 internal class DefaultPaintMixDecisionMakerTest {
 
-    private val logger = TestPathLogger()
-    private val defaultPaintMixDecisionMaker = DefaultPaintMixDecisionMaker(BestPathFinderFactory(logger))
 
-    @Test
-    fun `As soon as a successful solution with 0 matte paints is found no other paths in the tree are tried`() {
+    companion object {
+
+        @JvmStatic
+        fun differentPaintMixMakers(): List<Arguments> =
+                listOf(
+                        defaultPaintMixDecisionMaker()
+                )
+
+        private fun defaultPaintMixDecisionMaker(): Arguments {
+            val logger = TestPathLogger()
+            return Arguments.of(DefaultPaintMixDecisionMaker(BestPathFinderFactory(logger)) , logger)
+        }
+        private fun multiThreadedPaintMixDecisionMaker(): Arguments {
+            val logger = TestPathLogger()
+            return Arguments.of(DefaultPaintMixDecisionMaker(BestPathFinderFactory(logger)) , logger)
+        }
+    }
+
+    @MethodSource("differentPaintMixMakers")
+    @ParameterizedTest
+    fun `As soon as a successful solution with 0 matte paints is found no other paths in the tree are tried`(
+            defaultPaintMixDecisionMaker : DefaultPaintMixDecisionMaker, logger: TestPathLogger) {
         val paints = sortedSetOf(
                 Paint(Color(1), GLOSSY),
                 Paint(Color(2), GLOSSY),
@@ -31,8 +52,12 @@ internal class DefaultPaintMixDecisionMakerTest {
         Assertions.assertEquals(1, logger.receivedEvents.filter { it is SuccessfulCombination }.size)
     }
 
-    @Test
-    fun `example test case from provided document`() {
+    @MethodSource("differentPaintMixMakers")
+    @ParameterizedTest
+    fun `example test case from provided document`(
+            defaultPaintMixDecisionMaker : DefaultPaintMixDecisionMaker,
+            logger: TestPathLogger
+    ) {
         // arrange
         val file = "input_file_1.txt"
         setFileContentAsSystemIn(file)
@@ -45,8 +70,10 @@ internal class DefaultPaintMixDecisionMakerTest {
         Assertions.assertEquals(1, logger.receivedEvents.filter { it is SuccessfulCombination }.size)
     }
 
-    @Test
-    fun `test impossible case`() {
+    @MethodSource("differentPaintMixMakers")
+    @ParameterizedTest
+    fun `test impossible case`(defaultPaintMixDecisionMaker : DefaultPaintMixDecisionMaker,
+                               logger: TestPathLogger) {
         // arrange
         val file = "input_file_1.txt"
         setFileContentAsSystemIn(file)
@@ -59,8 +86,9 @@ internal class DefaultPaintMixDecisionMakerTest {
         Assertions.assertEquals(1, logger.receivedEvents.filter { it is SuccessfulCombination }.size)
     }
 
-    @Test
-    fun `all results are glossy`() {
+    @MethodSource("differentPaintMixMakers")
+    @ParameterizedTest
+    fun `all results are glossy`(defaultPaintMixDecisionMaker : DefaultPaintMixDecisionMaker) {
         // arrange
         setFileContentAsSystemIn("allResultsAreGlossy.txt")
         // act
@@ -70,8 +98,9 @@ internal class DefaultPaintMixDecisionMakerTest {
         Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, GLOSSY, GLOSSY)), results[0])
     }
 
-    @Test
-    fun `test it with a single batch`() {
+    @MethodSource("differentPaintMixMakers")
+    @ParameterizedTest
+    fun `test it with a single batch`(defaultPaintMixDecisionMaker : DefaultPaintMixDecisionMaker) {
         // arrange
         setFileContentAsSystemIn("singleEntry.txt")
         // act
@@ -82,8 +111,9 @@ internal class DefaultPaintMixDecisionMakerTest {
         Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, MATTE, GLOSSY, GLOSSY, GLOSSY, GLOSSY, GLOSSY, MATTE)), results[0])
     }
 
-    @Test
-    fun `test it with a small batch`() {
+    @MethodSource("differentPaintMixMakers")
+    @ParameterizedTest
+    fun `test it with a small batch`(defaultPaintMixDecisionMaker : DefaultPaintMixDecisionMaker) {
         // arrange
         setFileContentAsSystemIn("smallbatch.txt")
         // act
@@ -95,8 +125,9 @@ internal class DefaultPaintMixDecisionMakerTest {
         Assertions.assertEquals(SuccessfulResult(listOf(GLOSSY, GLOSSY, GLOSSY)), results[10])
     }
 
-    @Test
-    fun `test it with a big batch`() {
+    @MethodSource("differentPaintMixMakers")
+    @ParameterizedTest
+    fun `test it with a big batch`(defaultPaintMixDecisionMaker : DefaultPaintMixDecisionMaker) {
         // arrange
         setFileContentAsSystemIn("bigbatch.txt")
         // act
