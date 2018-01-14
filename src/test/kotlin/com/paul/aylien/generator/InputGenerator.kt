@@ -4,7 +4,10 @@ import com.paul.aylien.input.Customer
 import java.io.File
 import java.util.*
 
-
+/**
+ * A utility class for generating input file.
+ * Very useful for performance testing.
+ */
 fun main(args: Array<String>) {
     publishBatch(label = "smallbatch.txt",
             numberOfTestCases = 100,

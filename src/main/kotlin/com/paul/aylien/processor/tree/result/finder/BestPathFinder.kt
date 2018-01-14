@@ -1,12 +1,20 @@
-package com.paul.aylien.processor.tree
+package com.paul.aylien.processor.tree.result.finder
 
 import com.paul.aylien.input.Customer
-import com.paul.aylien.processor.DefaultPathLogger
-import com.paul.aylien.processor.PaintSelection
 import com.paul.aylien.processor.PaintSelectionGenerator
-import com.paul.aylien.processor.PathLogger
+import com.paul.aylien.processor.tree.PaintPreferenceNode
+import com.paul.aylien.processor.tree.Root
+import com.paul.aylien.processor.tree.logging.DefaultPathLogger
+import com.paul.aylien.processor.tree.logging.PathLogger
+import com.paul.aylien.processor.tree.result.NotBestChoice
+import com.paul.aylien.processor.tree.result.SuccessfulCombination
+import com.paul.aylien.processor.tree.result.TreePathResult
 
-
+/**
+ * Responsible for finding the best solution to the problem.
+ *
+ * XXX The object is stateful because of MinimumMattePathTracker, a new one needs to be created for each testcase.
+ */
 class BestPathFinder(private val pathLogger: PathLogger = DefaultPathLogger(),
                      private val allOriginalCustomers: List<Customer>) {
 
@@ -14,14 +22,16 @@ class BestPathFinder(private val pathLogger: PathLogger = DefaultPathLogger(),
     private val paintSelectionGenerator = PaintSelectionGenerator()
     private val minimumMattePathTracker = MinimumMattePathTracker()
 
-    fun findBestPath() = findBestPathRecursive(allOriginalCustomers, PaintSelection())
+    fun findBestPath() = findBestPathRecursive(allOriginalCustomers, Root())
 
 
     private fun findBestPathRecursive(customers: List<Customer>,
-                                      consumedPaints: PaintSelection): TreePathResult =
+                                      consumedPaints: PaintPreferenceNode): TreePathResult =
             when {
+                // base cases
                 minimumMattePathTracker.isAboveOrEqualToMinimum(consumedPaints) -> newBaseCase(NotBestChoice())
                 customers.isEmpty() -> newBaseCase(SuccessfulCombination(consumedPaints))
+                // recurse
                 else -> findBestBatchFor(customers, consumedPaints)
             }
 
@@ -32,8 +42,8 @@ class BestPathFinder(private val pathLogger: PathLogger = DefaultPathLogger(),
     }
 
     private fun findBestBatchFor(customers: List<Customer>,
-                                 currentPaintSelection: PaintSelection): TreePathResult {
-        val newPaintSelections = paintSelectionGenerator.generateSelection(customers, currentPaintSelection)
+                                 currentPaintSelection: PaintPreferenceNode): TreePathResult {
+        val newPaintSelections = paintSelectionGenerator.generateSelection(customers.first(), currentPaintSelection)
         return newPaintSelections
                 .map { findBestPathRecursive(customers.tail(), it) }
                 .filterIsInstance<SuccessfulCombination>()

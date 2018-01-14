@@ -1,6 +1,10 @@
 package com.paul.aylien.input
 
-
+/**
+ * a utility class for working with an iterator of strings.
+ *
+ * Used when reading content from the console.
+ */
 class InputLines(private val iterator: Iterator<String>) {
 
     fun next(): String = iterator.next()

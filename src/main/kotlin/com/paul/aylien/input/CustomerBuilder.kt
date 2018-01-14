@@ -1,5 +1,7 @@
 package com.paul.aylien.input
 
+import java.util.*
+
 
 /**
  * Responsible for building a customer from a line
@@ -18,10 +20,10 @@ class CustomerBuilder {
         return Customer(getLikedPaints(numberOfColorsLikedByCustomer, lines))
     }
 
-    private fun getLikedPaints(numberOfColorsLikedByCustomer: Int, lines: Iterator<Int>): Set<Paint> {
+    private fun getLikedPaints(numberOfColorsLikedByCustomer: Int, lines: Iterator<Int>): SortedSet<Paint> {
         return (1..numberOfColorsLikedByCustomer)
                 .map { lines.next().to(lines.next()) }
-                .map { paintBuilder.createPaint(it) }.toSet()
+                .map { paintBuilder.createPaint(it) }.toSortedSet()
     }
 
 }

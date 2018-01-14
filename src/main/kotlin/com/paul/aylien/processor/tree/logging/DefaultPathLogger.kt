@@ -1,6 +1,6 @@
-package com.paul.aylien.processor
+package com.paul.aylien.processor.tree.logging
 
-import com.paul.aylien.processor.tree.TreePathResult
+import com.paul.aylien.processor.tree.result.TreePathResult
 import mu.KLogging
 
 

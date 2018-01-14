@@ -5,10 +5,13 @@ import com.paul.aylien.input.TestCase
 import com.paul.aylien.output.Impossible
 import com.paul.aylien.output.Result
 import com.paul.aylien.output.SuccessfulResult
-import com.paul.aylien.processor.tree.BestPathFinderFactory
-import com.paul.aylien.processor.tree.NotBestChoice
-import com.paul.aylien.processor.tree.SuccessfulCombination
+import com.paul.aylien.processor.tree.result.NotBestChoice
+import com.paul.aylien.processor.tree.result.SuccessfulCombination
+import com.paul.aylien.processor.tree.result.finder.BestPathFinderFactory
 
+/**
+ * Responsible for mapping a {@class com.paul.aylien.processor.tree.TreePathResult} to a {@class com.paul.aylien.output.Result}
+ */
 class DefaultPaintMixDecisionMaker(private val bestPathFinderFactory: BestPathFinderFactory) : PaintMixDecisionMaker {
 
 

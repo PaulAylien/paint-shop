@@ -3,7 +3,10 @@ package com.paul.aylien.generator
 import com.paul.aylien.input.Color
 import java.util.*
 
-
+/**
+ * A utility class for generating colours.
+ * Used by InputGenerator.kt
+ */
 class RandomColoursGenerator(private val numberOfPaints: Int,
                              private val numberOfCustomers: Int,
                              private val maximumT: Int = 3000) {

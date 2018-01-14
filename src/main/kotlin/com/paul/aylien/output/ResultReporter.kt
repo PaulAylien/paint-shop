@@ -1,8 +1,10 @@
 package com.paul.aylien.output
 
-
+/**
+ * Responsible for reporting results.
+ */
 interface ResultReporter {
 
-    fun reportResult(result: Result)
+    fun reportResults(results: List<Result>)
 
 }

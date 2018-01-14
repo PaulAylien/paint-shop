@@ -6,7 +6,10 @@ import com.paul.aylien.input.Finish
 import com.paul.aylien.input.Paint
 import java.util.*
 
-
+/**
+ * A utility class for generating colours.
+ * Used by InputGenerator.kt
+ */
 class RandomCustomersGenerator(numberOfPaints: Int, private val numberOfCustomers: Int) {
 
     private val randomColoursGenerator: RandomColoursGenerator = RandomColoursGenerator(numberOfPaints, numberOfCustomers)
@@ -14,7 +17,7 @@ class RandomCustomersGenerator(numberOfPaints: Int, private val numberOfCustomer
     fun generateCustomers(): List<Customer> =
             (1..numberOfCustomers)
                     .map { generateCustomer() }
-                    .map { Customer(it.toSet()) }
+                    .map { Customer(it.toSortedSet()) }
 
 
     private fun generateCustomer(): List<Paint> {

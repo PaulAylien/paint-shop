@@ -1,10 +1,13 @@
 package com.paul.aylien
 
-import com.paul.aylien.processor.DefaultPathLogger
-import com.paul.aylien.processor.PathLogger
-import com.paul.aylien.processor.tree.TreePathResult
+import com.paul.aylien.processor.tree.logging.DefaultPathLogger
+import com.paul.aylien.processor.tree.logging.PathLogger
+import com.paul.aylien.processor.tree.result.TreePathResult
 
-
+/**
+ * when testing the TestPathLogger can be used to track exactly how many failures are occurring.
+ * Very useful for performance testing.
+ */
 class TestPathLogger : PathLogger {
 
     val receivedEvents = mutableListOf<TreePathResult>()

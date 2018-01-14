@@ -2,7 +2,9 @@ package com.paul.aylien.output
 
 import com.paul.aylien.input.Finish
 
-
+/**
+ * Represents the output of the application.
+ */
 sealed class Result
 class Impossible : Result() {
     override fun equals(other: Any?): Boolean = other != null && other is Impossible

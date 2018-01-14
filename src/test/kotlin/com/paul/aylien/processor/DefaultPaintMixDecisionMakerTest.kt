@@ -7,8 +7,8 @@ import com.paul.aylien.input.Finish.GLOSSY
 import com.paul.aylien.input.Finish.MATTE
 import com.paul.aylien.output.Impossible
 import com.paul.aylien.output.SuccessfulResult
-import com.paul.aylien.processor.tree.BestPathFinderFactory
-import com.paul.aylien.processor.tree.SuccessfulCombination
+import com.paul.aylien.processor.tree.result.finder.BestPathFinderFactory
+import com.paul.aylien.processor.tree.result.SuccessfulCombination
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
@@ -19,7 +19,7 @@ internal class DefaultPaintMixDecisionMakerTest {
 
     @Test
     fun `As soon as a successful solution with 0 matte paints is found no other paths in the tree are tried`() {
-        val paints = setOf(
+        val paints = sortedSetOf(
                 Paint(Color(1), GLOSSY),
                 Paint(Color(2), GLOSSY),
                 Paint(Color(3), GLOSSY))
@@ -77,7 +77,7 @@ internal class DefaultPaintMixDecisionMakerTest {
         // arrange
         setFileContentAsSystemIn("bigbatch.txt")
         // act
-        val map = ConsoleInputProvider().getTestCases()
+        ConsoleInputProvider().getTestCases()
                 .map { defaultPaintMixDecisionMaker.findBestBatch(it) }
         //assert
         // assuming the logic is correct this is just checking there are no stackoverflow or oom errors

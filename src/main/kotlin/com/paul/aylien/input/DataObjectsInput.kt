@@ -1,8 +1,21 @@
 package com.paul.aylien.input
 
+import java.util.*
+
+/**
+ * Data objects which represent the test case input
+ */
 
 data class Paint(val color: Color,
-                 val finish: Finish)
+                 val finish: Finish) : Comparable<Paint> {
+
+    override fun compareTo(other: Paint): Int =
+            when (this.finish) {
+                other.finish -> color.compareTo(other.color)
+                Finish.MATTE -> 1
+                Finish.GLOSSY -> -1
+            }
+}
 
 data class Color(val value: Int) : Comparable<Color> {
 
@@ -15,17 +28,7 @@ enum class Finish {
     MATTE
 }
 
-fun matteHasLowestPriority(): java.util.Comparator<Paint> {
-    return Comparator { a, b ->
-        when (a.finish) {
-            b.finish -> 0
-            Finish.MATTE -> 1
-            Finish.GLOSSY -> -1
-        }
-    }
-}
-
-data class Customer(val preferences: Set<Paint>)
+data class Customer(val preferences: SortedSet<Paint>)
 
 data class TestCase(val customers: List<Customer>, val numberOfPaints: Int)
 

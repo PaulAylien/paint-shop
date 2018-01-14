@@ -1,6 +1,8 @@
 package com.paul.aylien.input
 
-
+/**
+ * Responsible for building test cases from {@class InputLines}
+ */
 class TestCaseBuilder {
 
     private val customerLineInputReader = CustomerBuilder()

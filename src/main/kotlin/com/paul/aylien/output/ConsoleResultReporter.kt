@@ -1,11 +1,13 @@
 package com.paul.aylien.output
 
+/**
+ * Responsible for reporting results to the console.
+ */
+class ConsoleResultReporter : ResultReporter {
 
-class ConsolerResultReporter : ResultReporter {
 
-
-    override fun reportResult(result: Result) =
-            println(getResultString(result))
+    override fun reportResults(results: List<Result>) =
+            results.forEachIndexed { index, result -> println("Case #$index: ${getResultString(result)}") }
 
     private fun getResultString(result: Result): String {
         return when (result) {
@@ -16,6 +18,4 @@ class ConsolerResultReporter : ResultReporter {
             is Impossible -> "IMPOSSIBLE"
         }
     }
-
-
 }
