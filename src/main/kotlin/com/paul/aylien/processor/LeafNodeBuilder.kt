@@ -3,7 +3,7 @@ package com.paul.aylien.processor
 import com.paul.aylien.input.Customer
 import com.paul.aylien.processor.tree.PaintPreferenceNode
 
-class PaintSelectionGenerator {
+class LeafNodeBuilder {
 
     /**
      * Responsible for building tree branches which satisfy the given {@param customer}

@@ -13,7 +13,7 @@ internal class PaintSelectionGeneratorTest {
 
     @Test
     fun `when choosing a paint to satisfy a users requirement glossy is given priority`() {
-        val paintSelectionGenerator = PaintSelectionGenerator()
+        val paintSelectionGenerator = LeafNodeBuilder()
         val generateSelection = paintSelectionGenerator.generateSelection(Customer(sortedSetOf(Paint(Color(1), Finish.GLOSSY),
                 Paint(Color(2), Finish.MATTE))), Root()).toList()
 

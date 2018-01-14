@@ -26,9 +26,11 @@ dependencies {
     compile "com.aol.simplereact:cyclops-react:2.1.1"
     compile "com.google.guava:guava:23.6-jre"
     compile 'io.github.microutils:kotlin-logging:1.4.9'
+    compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21.1'
 
     testCompile('org.junit.jupiter:junit-jupiter-api:5.0.1')
-    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.0.1')
+    testCompile('org.junit.jupiter:junit-jupiter-params:5.0.2')
+    testCompile('org.junit.jupiter:junit-jupiter-engine:5.0.1')
 }
 
 
