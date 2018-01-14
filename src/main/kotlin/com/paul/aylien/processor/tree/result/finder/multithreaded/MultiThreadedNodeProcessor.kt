@@ -1,30 +1,33 @@
 package com.paul.aylien.processor.tree.result.finder.multithreaded
 
 import com.paul.aylien.input.Customer
+import com.paul.aylien.processor.tree.PaintPreferenceNode
 import com.paul.aylien.processor.tree.result.TreePathResult
 import com.paul.aylien.processor.tree.result.finder.NodeProcessor
 import com.paul.aylien.processor.tree.result.finder.singlethreaded.SingleThreadedNodeProcessor
 import kotlinx.coroutines.experimental.CommonPool
+import kotlinx.coroutines.experimental.NonCancellable.children
 import kotlinx.coroutines.experimental.async
 import kotlinx.coroutines.experimental.runBlocking
 
 
-const val THREAD_SPAWNING_DEFAULT = 100 // if there are more than this number of customers a new thread will be spawned.
 
-class MultiThreadedNodeProcessor(private val threadSpawningCount: Int = THREAD_SPAWNING_DEFAULT) : NodeProcessor {
+class MultiThreadedNodeProcessor(private val threadSpawningCount: Int = 4) : NodeProcessor {
 
+    private var hasSplit : Boolean = false
     private val singleThreadedNodeProcessor = SingleThreadedNodeProcessor()
 
-    override fun process(customers: List<Customer>,
-                         numberOfBranches: Int,
-                         branchResultProvider: () -> TreePathResult): TreePathResult =
-            if (customers.size > threadSpawningCount && numberOfBranches > 2) {
-                runBlocking {
-                    val async = async(CommonPool) { branchResultProvider.invoke() }
-                    async.await()
-                }
-            } else {
-                singleThreadedNodeProcessor.process(customers, numberOfBranches, branchResultProvider)
-            }
 
+    override fun processNodes(children: List<PaintPreferenceNode>,
+                              branchResultProvider: (PaintPreferenceNode) -> TreePathResult): List<TreePathResult> =
+        if (children.size >= threadSpawningCount && !hasSplit) {
+            hasSplit = true
+            runBlocking {
+                       children.map { async(CommonPool) { branchResultProvider.invoke(it) } }
+                               .map {  it.await() }
+
+            }
+        } else {
+            singleThreadedNodeProcessor.processNodes(children,branchResultProvider)
+        }
 }

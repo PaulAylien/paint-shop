@@ -46,10 +46,8 @@ class BestPathFinder(private val pathLogger: PathLogger = DefaultPathLogger(),
     private fun findBestBatchFor(customers: List<Customer>,
                                  currentPaintSelection: PaintPreferenceNode): TreePathResult {
         val newPaintSelections = leafNodeBuilder.generateSelection(customers.first(), currentPaintSelection)
-        return newPaintSelections
-                .map {
-                    nodeProcessor.process(customers, newPaintSelections.size, { findBestPathRecursive(customers.tail(), it) })
-                }
+        return nodeProcessor.processNodes(newPaintSelections,
+                {paintSelection -> findBestPathRecursive(customers.tail() ,paintSelection )})
                 .filterIsInstance<SuccessfulCombination>()
                 .firstOrNull() ?: newBaseCase(NotBestChoice())
     }
