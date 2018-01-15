@@ -293,3 +293,5 @@ With a caching node the above 3 would look like:
 
 
 
+### Optimization 8: run children nodes in parallel (exists in the branch feature/multithreaded, didn't get the time to merge into master) 
+Exactly what it says, if there are 4 or more children nodes then split the children onto separate threads.
